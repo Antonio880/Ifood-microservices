@@ -1,0 +1,3 @@
+[submodule "pagamentos"]
+	path = pagamentos
+	url = https://github.com/Antonio880/PaymentService
