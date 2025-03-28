@@ -41,12 +41,10 @@ public class OrderService {
 
     public OrderDto createOrder(OrderDto dto) {
         Order order = modelMapper.map(dto, Order.class);
-
         order.setDataHora(LocalDateTime.now());
         order.setStatus(Status.PLACED);
         order.getItens().forEach(item -> item.setOrder(order));
         Order salvo = repository.save(order);
-
         return modelMapper.map(order, OrderDto.class);
     }
 

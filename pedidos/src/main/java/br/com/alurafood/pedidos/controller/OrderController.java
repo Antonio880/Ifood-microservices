@@ -56,7 +56,7 @@ public class OrderController {
         }
 
 
-        @PutMapping("/{id}/pago")
+        @PutMapping("/{id}/paid")
         public ResponseEntity<Void> acceptPayment(@PathVariable @NotNull Long id) {
             service.approvePaymentOrder(id);
 
